@@ -1,0 +1,449 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: #503344;
+    background: #fff8fa;
+}
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: white;
+    box-shadow: 0 3px 15px rgba(180, 80, 120, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    color: #bd5279;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #503344;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #d64f86;
+}
+
+/* Hero Section */
+
+.hero {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    background: linear-gradient(120deg, #f9dce7, #fff2f5, #f5d4e0);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tagline {
+    color: #bd5279;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 5vw, 60px);
+    color: #713b54;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.tagline) {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.shop-btn {
+    display: inline-block;
+    background: linear-gradient(120deg, #c84d7e, #e77b9e);
+    color: white;
+    padding: 15px 32px;
+    border-radius: 35px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(200, 77, 126, 0.25);
+    transition: 0.3s;
+}
+
+.shop-btn:hover {
+    transform: translateY(-4px);
+}
+
+/* General Sections */
+
+.products, .about, .contact {
+    text-align: center;
+    padding: 75px 8%;
+}
+
+.products h2, .about h2, .contact h2,
+.cart-section h2, .checkout h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    color: #a8426c;
+    margin-bottom: 15px;
+}
+
+/* Product Cards */
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.product-card {
+    background: white;
+    width: 280px;
+    padding: 18px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(180, 80, 120, 0.10);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(180, 80, 120, 0.18);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.product-card h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 18px 0 10px;
+    color: #713b54;
+    font-size: 21px;
+}
+
+.product-card p {
+    color: #8b7580;
+    margin-bottom: 14px;
+}
+
+.product-card span {
+    display: block;
+    color: #bd4776;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.product-card button,
+.cart-item button,
+.cart-section > button {
+    background: #c84d7e;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-card button:hover,
+.cart-item button:hover,
+.cart-section > button:hover {
+    background: #96375e;
+}
+
+/* Shopping Cart */
+
+.cart-section {
+    padding: 70px 8%;
+    text-align: center;
+    background: #fff0f5;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    margin: 15px auto;
+    background: white;
+    border-radius: 15px;
+    max-width: 800px;
+    box-shadow: 0 5px 15px rgba(180, 80, 120, 0.08);
+}
+
+.cart-item span {
+    font-weight: 600;
+}
+
+#cart-total {
+    margin: 25px;
+    color: #a8426c;
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+}
+
+/* Checkout */
+
+.checkout {
+    padding: 75px 20px;
+    text-align: center;
+    background: #fff9fa;
+}
+
+.checkout form {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    box-shadow: 0 10px 35px rgba(180, 80, 120, 0.12);
+}
+
+.checkout input,
+.checkout textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #ead0db;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+}
+
+.checkout input:focus,
+.checkout textarea:focus {
+    border-color: #c84d7e;
+    box-shadow: 0 0 0 3px rgba(200, 77, 126, 0.10);
+}
+
+.checkout textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.checkout button {
+    background: linear-gradient(120deg, #c84d7e, #e77b9e);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.checkout button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(200, 77, 126, 0.25);
+}
+
+#checkout-total {
+    color: #a8426c;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+}
+
+#order-message {
+    color: #27834a;
+    margin: 20px auto;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* About and Contact */
+
+.about {
+    background: #fceaf0;
+}
+
+.contact {
+    background: white;
+}
+
+/* Responsive Design */
+
+@media (max-width: 650px) {
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .navbar ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 380px;
+        padding: 50px 7%;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 330px;
+    }
+
+    .cart-item {
+        gap: 10px;
+    }
+
+    .checkout form {
+        padding: 22px;
+    }
+}
+
+<section class="hero">
+
+    <div class="hero-content">
+        <p class="tagline">BEAUTY BEGINS WITH YOU</p>
+
+        <h2>Reveal Your Natural Beauty</h2>
+
+        <p>
+            Discover luxurious skincare essentials
+            designed to nourish your skin and
+            bring out your natural glow.
+        </p>
+
+        <a href="#products" class="shop-btn">
+            Shop Collection →
+        </a>
+
+        <div class="hero-features">
+            <span>♡ Premium Quality</span>
+            <span>♡ Everyday Beauty</span>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img
+            src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=900"
+            alt="Premium skincare collection">
+    </div>
+
+</section>
+
+/* Footer */
+
+.footer {
+    background: #713b54;
+    color: white;
+    padding: 60px 8% 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-about h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color:  #d25b0b;
+    margin-bottom: 12px;
+}
+
+.footer-about p {
+    line-height: 1.8;
+    margin-bottom: 10px;
+    color: #d25b0b;
+}
+
+.footer-links h3 {
+    color: #d25b0b;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    display: block;
+    color: #d25b0b;
+    text-decoration: none;
+    margin-bottom: 13px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: rgb(221, 19, 134);s
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #a77b8d;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    color: #d25b0b;
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 450px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
